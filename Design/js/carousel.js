@@ -32,13 +32,13 @@
 
   Carousel.VERSION  = '3.3.7'
 
-  Carousel.TRANSITION_DURATION = 6000
+  Carousel.TRANSITION_DURATION = 600
 
   Carousel.DEFAULTS = {
     interval: false,
     pause: false,
-    wrap: true,
-    keyboard: true
+    wrap: false,
+    keyboard: false
   }
 
   Carousel.prototype.keydown = function (e) {
@@ -52,17 +52,17 @@
     e.preventDefault()
   }
 
-  Carousel.prototype.cycle = function (e) {
-    e || (this.paused = false)
+  //Carousel.prototype.cycle = function (e) {
+  //  e || (this.paused = false)
 
-    this.interval && clearInterval(this.interval)
+  //  this.interval && clearInterval(this.interval)
 
-    this.options.interval
-      && !this.paused
-      && (this.interval = setInterval($.proxy(this.next, this), this.options.interval))
+  //  this.options.interval
+  //    && !this.paused
+  //    && (this.interval = setInterval($.proxy(this.next, this), this.options.interval))
 
-    return this
-  }
+  //  return this
+  //}
 
   Carousel.prototype.getItemIndex = function (item) {
     this.$items = item.parent().children('.item')
