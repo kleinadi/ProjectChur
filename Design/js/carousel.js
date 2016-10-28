@@ -32,11 +32,11 @@
 
   Carousel.VERSION  = '3.3.7'
 
-  Carousel.TRANSITION_DURATION = 600
+  Carousel.TRANSITION_DURATION = 6000
 
   Carousel.DEFAULTS = {
-    interval: 500,
-    pause: 'hover',
+    interval: false,
+    pause: false,
     wrap: true,
     keyboard: true
   }
