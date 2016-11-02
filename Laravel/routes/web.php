@@ -11,6 +11,32 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+use App\Task;
+use Illuminate\Http\Request;
+
+/**
+* Display Start site
+*/
+Route::get('/', 'HomeController@showView');
+
+/**
+* Display About site
+*/
+Route::get('/about', 'AboutController@showView');
+
+
+/**
+* Display login site
+*/
+Route::get('/login', 'LoginController@showView');
+
+/**
+* Display vereinregistrieren site
+*/
+Route::get('/vereinregistrieren', 'VereinRegistrierenController@showView');
+
+
+/**
+* Display mitgliedregistrieren site
+*/
+Route::get('/mitgliedregistrieren', 'MitgliedRegistrierenController@showView');
