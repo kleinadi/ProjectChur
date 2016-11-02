@@ -1,0 +1,102 @@
+.titelbezeichnung {
+	font-size: 32px;
+   font-family: 'Concert One', cursive;
+	
+}
+
+h1 {
+    font-family: 'Raleway', sans-serif;
+}
+
+h2 {
+    font-family: 'Raleway', sans-serif;
+}
+
+h3 {
+    font-family: 'Raleway', sans-serif;
+}
+
+p {
+    font-family: 'Raleway', sans-serif;
+}
+
+a {
+    font-family: 'Raleway', sans-serif;
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 5px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+   font-family: 'Raleway', sans-serif;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+   font-family: 'Raleway', sans-serif;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="register"] {
+  margin-bottom: 10px;
+}
+
+.btn {
+    padding: 14px 24px;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+     font-family: 'Raleway', sans-serif;
+}
+ 
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+}
+ 
+.btn-primary {
+    background: #0099cc;
+    color: #ffffff;
+}
+ 
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background: #33a6cc;
+}
+ 
+.btn-primary:active, .btn-primary.active {
+    background: #007299;
+    box-shadow: none;
+}
+
+.btn.round {
+    border-radius:24px;
+    background-color:#3B5998;
+}
+
+.btn.rount {
+    border-radius:24px;
+}
+
+.item.active {
+    background-color: white;
+}
+
+.matchday {
+    border: 5px solid black;
+    height: 350px;
+    width: 100%;
+}
+
