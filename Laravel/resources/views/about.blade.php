@@ -8,7 +8,6 @@
       <!-- Indicators -->
       <div class="carousel-inner" role="listbox">
         <div class="item active" style="background-image: url('{{URL::asset('img/9692192857_9aa0743183_o.jpg')}}'); background-size: cover;">
-          <!--<img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">-->
           <div class="container">
             <div class="carousel-caption">
               <h1>MyClub</h1>
