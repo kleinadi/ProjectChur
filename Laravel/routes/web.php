@@ -40,3 +40,7 @@ Route::get('/vereinregistrieren', 'VereinRegistrierenController@showView');
 * Display mitgliedregistrieren site
 */
 Route::get('/mitgliedregistrieren', 'MitgliedRegistrierenController@showView');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
