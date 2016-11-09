@@ -16,10 +16,14 @@ Dokumentation: https://laravel.com/docs/5.3
 Version: 5.3
 
 
+
+
 Der Code für diese WebApp ist in diesem Git Repository. Damit die Website angeschaut werden kann braucht es eine virtuelle Maschine.
 
 Hier die Anleitung zur Installation der virtuellen Maschine und Homestead:
 (Die Anleitung ist nur in Englisch verfügbar und Teile davon wurden von der Laravel-Seite kopiert)
+
+
 
 
 # 1 Installationen:
