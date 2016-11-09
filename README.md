@@ -125,7 +125,13 @@ Enter your vagrant box via ssh and navigate to the root of the lineup project an
 composer install
 ```
 
-### 3.5 Datenbank aktualisieren
+### 3.5 Enviroments konfiguration
+The configuration file who contains several environments variable has to be created. In the root directory of the project there is an example configuration file that can be copied following this command:
+```
+cp .env.example .env
+```
+
+### 3.6 Datenbank aktualisieren
 All the migrations have to be executed with following command to create the database structure:
 ```
 php artisan migrate
