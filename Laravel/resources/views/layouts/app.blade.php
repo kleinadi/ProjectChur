@@ -63,18 +63,27 @@
               <ul class="nav navbar-nav">
                 <li class=""><a href="home">Home</a></li>
                 <li><a href="about">About</a></li>
+                <li>
+                  @if (Auth::guest())
 
-              <li>
+                  @else
+                  <li><a href="vereinreg">Verein erstellen</a></li>
+                </li>
+                @endif
+                <li>
+                @if (Auth::guest())
+
+                @else
                   <a href="{{ url('/logout') }}"
                      onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                     document.getElementById('logout-form').submit();">
                     Logout
                   </a>
-
                   <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
                     {{ csrf_field() }}
                   </form>
                 </li>
+                @endif
               </ul>
             </div>
           </div>
