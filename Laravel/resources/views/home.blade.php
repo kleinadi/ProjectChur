@@ -97,7 +97,6 @@
     </a>
 </div><!-- /.carousel -->
 
-<a href="{{ URL::route('account-sign-out') }}">Sign Out</a>
 
 
 @endsection

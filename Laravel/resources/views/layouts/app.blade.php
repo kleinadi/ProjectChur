@@ -8,8 +8,17 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>Carousel Template for Bootstrap</title>
+
+    <!-- Scripts -->
+    <script>
+      window.Laravel = <?php echo json_encode([
+              'csrfToken' => csrf_token(),
+      ]); ?>
+    </script>
 
     <!-- Bootstrap core CSS -->
     <link href="{{URL::asset('css/bootstrap.min.css')}}"   rel="stylesheet">
@@ -52,8 +61,20 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                <li class=""><a href="/">Home</a></li>
+                <li class=""><a href="home">Home</a></li>
                 <li><a href="about">About</a></li>
+
+              <li>
+                  <a href="{{ url('/logout') }}"
+                     onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                    Logout
+                  </a>
+
+                  <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                    {{ csrf_field() }}
+                  </form>
+                </li>
               </ul>
             </div>
           </div>

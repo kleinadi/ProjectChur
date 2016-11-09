@@ -8,14 +8,14 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
-class VereinRegistrierenController extends Controller
+class HelloController extends Controller
 {
     /**
-    * Display VereinRegistrieren site
-    **/ 
-    public function showView() 
+     * Display about site
+     **/
+    public function showView()
     {
-        return view('vereinregistrieren');
+        return view('hello');
     }
 
 

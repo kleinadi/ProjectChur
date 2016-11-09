@@ -17,18 +17,13 @@ use Illuminate\Http\Request;
 /**
 * Display Start site
 */
-Route::get('/', 'HomeController@showView');
+Route::get('/', 'HelloController@showView');
 
 /**
 * Display About site
 */
 Route::get('/about', 'AboutController@showView');
 
-
-/**
-* Display login site
-*/
-Route::get('/login', 'LoginController@showView');
 
 /**
 * Display vereinregistrieren site
@@ -39,7 +34,7 @@ Route::get('/vereinregistrieren', 'VereinRegistrierenController@showView');
 /**
 * Display mitgliedregistrieren site
 */
-Route::get('/mitgliedregistrieren', 'MitgliedRegistrierenController@showView');
+Route::get('/mitgliedregistrieren', 'RegisterController@');
 
 Auth::routes();
 
