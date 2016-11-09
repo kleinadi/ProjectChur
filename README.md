@@ -8,9 +8,13 @@ Die WebApp ist für Vereine, die Ihre Termine einfach verwalten wollen. Der Vere
 # Projektname: myClub
 
 Framework: Laravel
+
 Homepage: https://laravel.com/
+
 Dokumentation: https://laravel.com/docs/5.3
+
 Version: 5.3
+
 
 Der Code für diese WebApp ist in diesem Git Repository. Damit die Website angeschaut werden kann braucht es eine virtuelle Maschine.
 
