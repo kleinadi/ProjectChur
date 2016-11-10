@@ -11,7 +11,6 @@
                     <div class="carousel-caption">
                         <h1>Registriere dein Verein</h1>
                         </br>
-                        <!-- <form class="form-signin" method="post" action="./Main.html"> -->
                         <form class="form-signin" role="form" method="POST" action="{{ url('/vereinreg') }}">
                             {{ csrf_field() }}
 
