@@ -11,7 +11,7 @@
 |
 */
 
-use App\Task;
+use App\Verein;
 use Illuminate\Http\Request;
 
 /**
@@ -25,17 +25,10 @@ Route::get('/', 'HelloController@showView');
 Route::get('/about', 'AboutController@showView');
 
 
-/**
-* Display vereinregistrieren site
-*/
-Route::get('/vereinregistrieren', 'VereinRegistrierenController@showView');
-
-
-/**
-* Display mitgliedregistrieren site
-*/
-Route::get('/mitgliedregistrieren', 'RegisterController@');
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+Route::get('/vereinreg', 'VereinRegController@index');
+
+Route::post('/vereinreg','VereinRegController@newVerein');
