@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Verein extends Model
 {
-    //
+    protected $table = 'club';
 }

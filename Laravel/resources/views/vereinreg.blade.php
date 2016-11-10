@@ -12,7 +12,7 @@
                         <h1>Registriere dein Verein</h1>
                         </br>
                         <!-- <form class="form-signin" method="post" action="./Main.html"> -->
-                        <form class="form-signin" role="form" method="POST" action="{{ url('/home') }}">
+                        <form class="form-signin" role="form" method="POST" action="{{ url('/vereinreg') }}">
                             {{ csrf_field() }}
 
                             <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">

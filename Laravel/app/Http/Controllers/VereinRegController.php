@@ -38,7 +38,7 @@ class VereinRegController extends Controller
         $club->name = $request->name;
         $club->save();
 
-        return redirect('home');
+        return view('home');
 
     }
 
