@@ -11,7 +11,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Carousel Template for Bootstrap</title>
+    <title>MyClub</title>
 
     <!-- Scripts -->
     <script>
