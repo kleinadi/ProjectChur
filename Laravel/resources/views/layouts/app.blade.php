@@ -12,7 +12,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>MyClub</title>
-    <link href="{{URL::asset('img/favicon.ico')}}" rel="shortcut icon"\>
+    <link href="{{URL::asset('img/faviconC.ico')}}" rel="shortcut icon"\>
 
     <!-- Scripts -->
     <script>
