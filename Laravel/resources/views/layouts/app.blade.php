@@ -75,6 +75,13 @@
                 @if (Auth::guest())
 
                 @else
+                  <li><a href="terminreg">Termin erstellen</a></li>
+                  </li>
+                @endif
+                <li>
+                @if (Auth::guest())
+
+                @else
                   <a href="{{ url('/logout') }}"
                      onclick="event.preventDefault();
                      document.getElementById('logout-form').submit();">

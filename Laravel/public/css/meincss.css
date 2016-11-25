@@ -101,6 +101,8 @@ a {
 }
 
 .item.active {
-    height: 500px;
+    height: 680px;
 }
-
+.carousel {
+    height: 680px;
+}

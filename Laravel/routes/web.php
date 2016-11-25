@@ -32,3 +32,7 @@ Route::get('/home', 'HomeController@index');
 Route::get('/vereinreg', 'VereinRegController@index');
 
 Route::post('/vereinreg','VereinRegController@newVerein');
+
+Route::get('/terminreg', 'TerminRegController@index');
+
+Route::post('/terminreg','TerminRegController@newTermin');
