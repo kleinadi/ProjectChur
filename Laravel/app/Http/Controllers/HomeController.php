@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-
+use App\Termin;
 
 class HomeController extends Controller
 {
@@ -23,6 +23,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $appointment = Termin::orderBy('created_at', 'asc')->get();
+
+        return view('home', ['appointment' => $appointment]);
     }
 }

@@ -2,6 +2,8 @@
 
 @section('content')
 
+
+
 <!-- Carousel
 ================================================== -->
 <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
@@ -20,16 +22,21 @@
                         <div class="col-lg-2">
                         </div>
                         <div class="col-lg-8">
-                            <div id="Matchday" class="matchday" style="border: 0px solid black; box-shadow: 1px; background: rgba(0,128,255,0.3);
-                                    -webkit-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
-                                    -moz-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
-                                    box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
-                                    ">
-                                <p><span style="font-size: 28px;">Termin:</span> Fussballspiel</p>
-                                <p><span style="font-size: 28px;">Datum:</span> 01. Januar 2017</p>
-                                <p><span style="font-size: 28px;">Ort:</span> Chur</p>
-                                <p><span style="font-size: 28px;">Standort:</span> Obere Au</p>
-                                <p><span style="font-size: 28px;">Leiter:</span> Geo Bontognali</p>
+                            <div id="Matchday" class="matchday">
+                                @if (count($appointment) > 0)
+                                <tbody>
+                                    <tr>
+                                        <td class="table-text">
+                                            <div><h2>{{ $appointment[1]->name }}</h2></div>
+                                            <div><h2>{{ $appointment[1]->date }}</h2></div>
+                                            <div><h2>{{ $appointment[1]->time }}</h2></div>
+                                            <div><h2>{{ $appointment[1]->location }}</h2></div>
+                                            <div><h2>{{ $appointment[1]->place }}</h2></div>
+                                            <div><h2>{{ $appointment[1]->leader }}</h2></div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                @endif
                             </div>
                         </div>
                         <div class="col-lg-2">
