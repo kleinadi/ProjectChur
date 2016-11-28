@@ -12,6 +12,8 @@
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
         <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
     </ol>
     <div class="carousel-inner" role="listbox">
 
@@ -27,15 +29,23 @@
                                 <tbody>
                                     <tr>
                                         <td class="table-text">
-                                            <div><h2>{{ $appointment[1]->name }}</h2></div>
-                                            <div><h2>{{ $appointment[1]->date }}</h2></div>
-                                            <div><h2>{{ $appointment[1]->time }}</h2></div>
-                                            <div><h2>{{ $appointment[1]->location }}</h2></div>
-                                            <div><h2>{{ $appointment[1]->place }}</h2></div>
-                                            <div><h2>{{ $appointment[1]->leader }}</h2></div>
+                                            <div><h2>{{ $appointment[0]->name }}</h2></div>
+                                            <div><h2>{{ $appointment[0]->date }}</h2></div>
+                                            <div><h2>{{ $appointment[0]->time }}</h2></div>
+                                            <div><h2>{{ $appointment[0]->location }}</h2></div>
+                                            <div><h2>{{ $appointment[0]->place }}</h2></div>
+                                            <div><h2>{{ $appointment[0]->leader }}</h2></div>
                                         </td>
                                     </tr>
                                 </tbody>
+                                @else
+                                    <tbody>
+                                    <tr>
+                                        <td class="table-text">
+                                            <div><h1>Kein Termin vorhanden</h1></div>
+                                        </td>
+                                    </tr>
+                                    </tbody>
                                 @endif
                             </div>
                         </div>
@@ -55,16 +65,29 @@
                         <div class="col-lg-2">
                         </div>
                         <div class="col-lg-8">
-                            <div id="Matchday" class="matchday" style="border: 0px solid black; box-shadow: 1px; background: rgba(0,128,255,0.3);
-                                    -webkit-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
-                                    -moz-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
-                                    box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
-                                    ">
-                                <p><span style="font-size: 28px;">Termin:</span> Fussballspiel</p>
-                                <p><span style="font-size: 28px;">Datum:</span> 01. Januar 2017</p>
-                                <p><span style="font-size: 28px;">Ort:</span> Chur</p>
-                                <p><span style="font-size: 28px;">Standort:</span> Obere Au</p>
-                                <p><span style="font-size: 28px;">Leiter:</span> Geo Bontognali</p>
+                            <div id="Matchday" class="matchday">
+                                @if (count($appointment) > 1)
+                                    <tbody>
+                                    <tr>
+                                        <td class="table-text">
+                                            <div><h2>{{ $appointment[1]->name }}</h2></div>
+                                            <div><h2>{{ $appointment[1]->date }}</h2></div>
+                                            <div><h2>{{ $appointment[1]->time }}</h2></div>
+                                            <div><h2>{{ $appointment[1]->location }}</h2></div>
+                                            <div><h2>{{ $appointment[1]->place }}</h2></div>
+                                            <div><h2>{{ $appointment[1]->leader }}</h2></div>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                @else
+                                    <tbody>
+                                    <tr>
+                                        <td class="table-text">
+                                            <div><h1>Kein Termin vorhanden</h1></div>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                @endif
                             </div>
                         </div>
                         <div class="col-lg-2">
@@ -81,16 +104,105 @@
                         <div class="col-lg-2">
                         </div>
                         <div class="col-lg-8">
-                            <div id="Matchday" class="matchday" style="border: 0px solid black; box-shadow: 1px; background: rgba(0,128,255,0.3);
-                                    -webkit-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
-                                    -moz-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
-                                    box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
-                                    ">
-                                <p><span style="font-size: 28px;">Termin:</span> Fussballspiel</p>
-                                <p><span style="font-size: 28px;">Datum:</span> 01. Januar 2017</p>
-                                <p><span style="font-size: 28px;">Ort:</span> Chur</p>
-                                <p><span style="font-size: 28px;">Standort:</span> Obere Au</p>
-                                <p><span style="font-size: 28px;">Leiter:</span> Geo Bontognali</p>
+                            <div id="Matchday" class="matchday">
+                                @if (count($appointment) > 2)
+                                    <tbody>
+                                    <tr>
+                                        <td class="table-text">
+                                            <div><h2>{{ $appointment[2]->name }}</h2></div>
+                                            <div><h2>{{ $appointment[2]->date }}</h2></div>
+                                            <div><h2>{{ $appointment[2]->time }}</h2></div>
+                                            <div><h2>{{ $appointment[2]->location }}</h2></div>
+                                            <div><h2>{{ $appointment[2]->place }}</h2></div>
+                                            <div><h2>{{ $appointment[2]->leader }}</h2></div>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                @else
+                                    <tbody>
+                                    <tr>
+                                        <td class="table-text">
+                                            <div><h1>Kein Termin vorhanden</h1></div>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                @endif
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="container">
+                <div class="carousel-caption">
+                    <div class="row">
+                        <div class="col-lg-2">
+                        </div>
+                        <div class="col-lg-8">
+                            <div id="Matchday" class="matchday">
+                                @if (count($appointment) > 3)
+                                    <tbody>
+                                    <tr>
+                                        <td class="table-text">
+                                            <div><h2>{{ $appointment[3]->name }}</h2></div>
+                                            <div><h2>{{ $appointment[3]->date }}</h2></div>
+                                            <div><h2>{{ $appointment[3]->time }}</h2></div>
+                                            <div><h2>{{ $appointment[3]->location }}</h2></div>
+                                            <div><h2>{{ $appointment[3]->place }}</h2></div>
+                                            <div><h2>{{ $appointment[3]->leader }}</h2></div>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                @else
+                                    <tbody>
+                                    <tr>
+                                        <td class="table-text">
+                                            <div><h1>Kein Termin vorhanden</h1></div>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                @endif
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="container">
+                <div class="carousel-caption">
+                    <div class="row">
+                        <div class="col-lg-2">
+                        </div>
+                        <div class="col-lg-8">
+                            <div id="Matchday" class="matchday">
+                                @if (count($appointment) > 4)
+                                    <tbody>
+                                    <tr>
+                                        <td class="table-text">
+                                            <div><h2>{{ $appointment[4]->name }}</h2></div>
+                                            <div><h2>{{ $appointment[4]->date }}</h2></div>
+                                            <div><h2>{{ $appointment[4]->time }}</h2></div>
+                                            <div><h2>{{ $appointment[4]->location }}</h2></div>
+                                            <div><h2>{{ $appointment[4]->place }}</h2></div>
+                                            <div><h2>{{ $appointment[4]->leader }}</h2></div>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                @else
+                                    <tbody>
+                                    <tr>
+                                        <td class="table-text">
+                                            <div><h1>Kein Termin vorhanden</h1></div>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                @endif
                             </div>
                         </div>
                         <div class="col-lg-2">
