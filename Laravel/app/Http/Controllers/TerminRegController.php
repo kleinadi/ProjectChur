@@ -44,7 +44,9 @@ class TerminRegController extends Controller
         $appointment->leader = $request->leader;
         $appointment->save();
 
-        return view('home');
+        $appointment = Termin::orderBy('created_at', 'asc')->get();
+
+        return view('home', ['appointment' => $appointment]);
 
     }
 

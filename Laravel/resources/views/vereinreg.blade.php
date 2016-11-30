@@ -24,6 +24,11 @@
                                     </span>
                                 @endif
                             </div>
+                            @foreach ($users as $user)
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="">{{ $user->name }}</label>
+                                </div>
+                            @endforeach
                             <div class="form-group">
                                 <button class="btn btn-m btn-primary btn-block rount" type="submit">Verein erstellen</button>
                             </div>

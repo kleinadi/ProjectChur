@@ -15,8 +15,9 @@ class VereinRegController extends Controller
      **/
     public function index()
     {
+        $users = User::orderBy('created_at', 'asc')->get();
 
-        return view('vereinreg');
+        return view('vereinreg', ['users' => $users]);
     }
 
     /**
