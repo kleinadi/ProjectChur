@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Termin;
+use App\Userappointment;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -23,8 +25,12 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $userapp = Userappointment::orderBy('created_at', 'asc')->get();
+
         $appointment = Termin::orderBy('created_at', 'asc')->get();
 
-        return view('home', ['appointment' => $appointment]);
+        $id = Auth::id();
+
+        return view('home', ['appointment' => $appointment], ['userapp' => $userapp], ['id' => $id]);
     }
 }

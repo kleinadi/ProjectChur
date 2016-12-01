@@ -24,6 +24,7 @@
                                     </span>
                                 @endif
                             </div>
+                            <h1>Wähle deine Mitglieder</h1>
                             @foreach ($users as $user)
                                 <div class="checkbox">
                                     <label><input name="user_list[]" type="checkbox" value="{{ $user->id }}">{{ $user->name }}</label>

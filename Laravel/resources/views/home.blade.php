@@ -16,7 +16,8 @@
         <li data-target="#myCarousel" data-slide-to="4"></li>
     </ol>
     <div class="carousel-inner" role="listbox">
-
+        @foreach ($userapp as $myappointment)
+            @if ($myappointment->fk_users == Auth::id())
         <div class="item active">
             <div class="container">
                 <div class="carousel-caption">
@@ -25,28 +26,18 @@
                         </div>
                         <div class="col-lg-8">
                             <div id="Matchday" class="matchday">
-                                @if (count($appointment) > 0)
-                                <tbody>
-                                    <tr>
-                                        <td class="table-text">
-                                            <div><h2>{{ $appointment[0]->name }}</h2></div>
-                                            <div><h2>{{ $appointment[0]->date }}</h2></div>
-                                            <div><h2>{{ $appointment[0]->time }}</h2></div>
-                                            <div><h2>{{ $appointment[0]->location }}</h2></div>
-                                            <div><h2>{{ $appointment[0]->place }}</h2></div>
-                                            <div><h2>{{ $appointment[0]->leader }}</h2></div>
+                                        <tbody>
+                                            <tr>
+                                                <td class="table-text">
+                                                <div><h2>{{ $myappointment->name }}</h2></div>
+                                                <div><h2>{{ $myappointment->date }}</h2></div>
+                                                <div><h2>{{ $myappointment->time }}</h2></div>
+                                                <div><h2>{{ $myappointment->location }}</h2></div>
+                                                <div><h2>{{ $myappointment->place }}</h2></div>
+                                                <div><h2>{{ $myappointment->leader }}</h2></div>
                                         </td>
                                     </tr>
                                 </tbody>
-                                @else
-                                    <tbody>
-                                    <tr>
-                                        <td class="table-text">
-                                            <div><h1>Kein Termin vorhanden</h1></div>
-                                        </td>
-                                    </tr>
-                                    </tbody>
-                                @endif
                             </div>
                         </div>
                         <div class="col-lg-2">
@@ -55,7 +46,8 @@
                 </div>
             </div>
         </div>
-
+            @endif
+        @endforeach
 
         <div class="item">
             <!--<img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">-->
