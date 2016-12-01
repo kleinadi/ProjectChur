@@ -75,6 +75,13 @@
                                 @endif
                             </div>
                             <div class="form-group">
+                                <select class="form-control" name="appointmentclub" id="appointmentclub">
+                                    @foreach ($club as $cluby)
+                                        <option value="{{ $cluby->id }}">{{ $cluby->name }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="form-group">
                                 <button class="btn btn-m btn-primary btn-block rount" type="submit">Termin erstellen</button>
                             </div>
                     </div>

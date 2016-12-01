@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\User;
 use App\Verein;
 use App\Termin;
+use App\Userclub;
+use App\Userappointment;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -16,8 +18,9 @@ class TerminRegController extends Controller
      **/
     public function index()
     {
+        $club = Verein::orderBy('created_at', 'asc')->get();
 
-        return view('terminreg');
+        return view('terminreg', ['club' => $club]);
     }
 
     /**
@@ -44,7 +47,22 @@ class TerminRegController extends Controller
         $appointment->leader = $request->leader;
         $appointment->save();
 
+
+        $userclub = Userclub::orderBy('created_at', 'asc')->get();
+
+
+        foreach($userclub as $usercluby) {
+            if ($request->appointmentclub == $usercluby->fk_club) {
+                $userappointment = new Userappointment;
+                $userappointment->fk_users = $usercluby->fk_users;
+                $userappointment->fk_appointment = $appointment->id;
+                $userappointment->save();
+
+            }
+        }
+
         $appointment = Termin::orderBy('created_at', 'asc')->get();
+
 
         return view('home', ['appointment' => $appointment]);
 
