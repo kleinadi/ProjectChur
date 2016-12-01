@@ -42,10 +42,15 @@ class VereinRegController extends Controller
         $club->name = $request->name;
         $club->save();
 
-        $userclub = new Userclub;
-        $userclub->fk_users = ;
-        $userclub->fk_club = $club->id;
-        $userclub->save();
+        if(!empty($request->user_list)) {
+            foreach($request->user_list as $userid) {
+
+                $userclub = new Userclub;
+                $userclub->fk_users = $userid;
+                $userclub->fk_club = $club->id;
+                $userclub->save();
+            }
+        }
 
         $appointment = Termin::orderBy('created_at', 'asc')->get();
 
