@@ -26,7 +26,7 @@
                             </div>
                             @foreach ($users as $user)
                                 <div class="checkbox">
-                                    <label><input type="checkbox" value="">{{ $user->name }}</label>
+                                    <label><input name="" type="checkbox" value="{{ $user->id }}">{{ $user->name }}</label>
                                 </div>
                             @endforeach
                             <div class="form-group">

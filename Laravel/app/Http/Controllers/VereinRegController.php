@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\User;
 use App\Verein;
+use App\Userclub;
+use App\Termin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -16,6 +18,7 @@ class VereinRegController extends Controller
     public function index()
     {
         $users = User::orderBy('created_at', 'asc')->get();
+
 
         return view('vereinreg', ['users' => $users]);
     }
@@ -39,7 +42,14 @@ class VereinRegController extends Controller
         $club->name = $request->name;
         $club->save();
 
-        return view('home');
+        $userclub = new Userclub;
+        $userclub->fk_users = ;
+        $userclub->fk_club = $club->id;
+        $userclub->save();
+
+        $appointment = Termin::orderBy('created_at', 'asc')->get();
+
+        return view('home', ['appointment' => $appointment]);
 
     }
 
