@@ -35,4 +35,22 @@ class HomeController extends Controller
 
         return view('home', ['appointment' => $appointment], ['userappointment' => $userappointment], ['id' => $id], ['i' => $i]);
     }
+
+    public function confirm()
+    {
+
+        return view('about');
+    }
+
+    public function liste()
+    {
+
+        return view('about');
+    }
+
+    public function deny()
+    {
+
+        return view('about');
+    }
 }

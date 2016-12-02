@@ -29,6 +29,12 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
+Route::post('/confirm', 'HomeController@confirm');
+
+Route::get('/liste', 'HomeController@liste');
+
+Route::post('/deny', 'HomeController@deny');
+
 Route::get('/vereinreg', 'VereinRegController@index');
 
 Route::post('/vereinreg','VereinRegController@newVerein');

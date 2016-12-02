@@ -37,8 +37,21 @@
                                     </tr>
                                 </tbody>
                             </div>
-                            <button type="button" class="btn btn-primary btn-circle btn-xl"><i class="glyphicon glyphicon-list"></i></button>
-                            <button type="button" class="btn btn-warning btn-circle btn-xl"><i class="glyphicon glyphicon-remove"></i></button>
+                            <div class="col-lg-4">
+                            <form class="form-inline" role="form" method="POST" action="{{ url('/confirm') }}">
+                            <button type="submit" class="btn btn-success btn-circle btn-xl"><i class="glyphicon glyphicon-ok"></i></button>
+                                </form>
+                            </div>
+                            <div class="col-lg-4">
+                            <form class="form-inline" role="form" method="GET" action="{{ url('/liste') }}">
+                            <button type="submit" class="btn btn-primary btn-circle btn-xl"><i class="glyphicon glyphicon-list"></i></button>
+                                </form>
+                            </div>
+                            <div class="col-lg-4">
+                            <form class="form-inline" role="form" method="POST" action="{{ url('/deny') }}">
+                            <button type="submit" class="btn btn-danger btn-circle btn-xl"><i class="glyphicon glyphicon-remove"></i></button>
+                                </form>
+                            </div>
                         </div>
                         <div class="col-lg-2">
                         </div>
