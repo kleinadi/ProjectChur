@@ -63,8 +63,10 @@ class TerminRegController extends Controller
 
         $appointment = Termin::orderBy('created_at', 'asc')->get();
 
+        $userappointment = Userappointment::orderBy('created_at', 'asc')->get();
 
-        return view('home', ['appointment' => $appointment]);
+
+        return view('home', ['appointment' => $appointment], ['userappointment' => $userappointment]);
 
     }
 

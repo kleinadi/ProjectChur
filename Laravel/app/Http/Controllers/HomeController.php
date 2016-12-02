@@ -25,12 +25,14 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $userapp = Userappointment::orderBy('created_at', 'asc')->get();
+        $userappointment = Userappointment::orderBy('created_at', 'asc')->get();
 
         $appointment = Termin::orderBy('created_at', 'asc')->get();
 
         $id = Auth::id();
 
-        return view('home', ['appointment' => $appointment], ['userapp' => $userapp], ['id' => $id]);
+        $i = 0;
+
+        return view('home', ['appointment' => $appointment], ['userappointment' => $userappointment], ['id' => $id], ['i' => $i]);
     }
 }

@@ -6,6 +6,7 @@ use App\User;
 use App\Verein;
 use App\Userclub;
 use App\Termin;
+use App\Userappointment;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -54,7 +55,9 @@ class VereinRegController extends Controller
 
         $appointment = Termin::orderBy('created_at', 'asc')->get();
 
-        return view('home', ['appointment' => $appointment]);
+        $userappointment = Userappointment::orderBy('created_at', 'asc')->get();
+
+        return view('home', ['appointment' => $appointment], ['userappointment' => $userappointment]);
 
     }
 
