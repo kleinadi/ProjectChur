@@ -53,7 +53,7 @@ class VereinRegController extends Controller
             }
         }
 
-        $appointment = Termin::orderBy('created_at', 'asc')->get();
+        $appointment = Termin::orderBy('date', 'asc')->get();
 
         $userappointment = Userappointment::orderBy('created_at', 'asc')->get();
 

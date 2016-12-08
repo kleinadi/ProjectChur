@@ -20,7 +20,9 @@ class TerminRegController extends Controller
     {
         $club = Verein::orderBy('created_at', 'asc')->get();
 
-        return view('terminreg', ['club' => $club]);
+        $userclub = Userclub::orderBy('created_at', 'asc')->get();
+
+        return view('terminreg', ['club' => $club], ['userclub' => $userclub]);
     }
 
     /**
@@ -56,12 +58,13 @@ class TerminRegController extends Controller
                 $userappointment = new Userappointment;
                 $userappointment->fk_users = $usercluby->fk_users;
                 $userappointment->fk_appointment = $appointment->id;
+                $userappointment->confirmed = true;
                 $userappointment->save();
 
             }
         }
 
-        $appointment = Termin::orderBy('created_at', 'asc')->get();
+        $appointment = Termin::orderBy('date', 'asc')->get();
 
         $userappointment = Userappointment::orderBy('created_at', 'asc')->get();
 

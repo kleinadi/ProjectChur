@@ -76,9 +76,15 @@
                             </div>
                             <div class="form-group">
                                 <select class="form-control" name="appointmentclub" id="appointmentclub">
-                                    @foreach ($club as $cluby)
-                                        <option value="{{ $cluby->id }}">{{ $cluby->name }}</option>
-                                    @endforeach
+                                    @foreach ($userclub as $myuserclub)
+                                        @if ($myuserclub->fk_users == Auth::id())
+                                                @foreach ($club as $cluby)
+                                                @if ($myuserclub->fk_club == $cluby->id)
+                                                <option value="{{ $cluby->id }}">{{ $cluby->name }}</option>
+                                                @endif
+                                            @endforeach
+                                            @endif
+                                        @endforeach
                                 </select>
                             </div>
                             <div class="form-group">

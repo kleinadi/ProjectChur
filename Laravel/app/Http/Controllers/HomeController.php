@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Termin;
 use App\Userappointment;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\Carbon;
 
 class HomeController extends Controller
 {
@@ -27,11 +28,12 @@ class HomeController extends Controller
     {
         $userappointment = Userappointment::orderBy('created_at', 'asc')->get();
 
-        $appointment = Termin::orderBy('created_at', 'asc')->get();
+        $appointment = Termin::orderBy('date', 'asc')->get();
 
         $id = Auth::id();
 
         $i = 0;
+
 
         return view('home', ['appointment' => $appointment], ['userappointment' => $userappointment], ['id' => $id], ['i' => $i]);
     }
