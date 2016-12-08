@@ -44,8 +44,7 @@
                                 </form>
                             </div>
                             <div class="col-lg-4">
-                            <form class="form-inline" role="form" method="GET" action="{{ url('/liste') }}">
-                                {{ csrf_field() }}
+                            <form class="form-inline" role="form" method="GET" action="{{ url('/list') }}">
                             <button type="submit" class="btn btn-primary btn-circle btn-xl"><i class="glyphicon glyphicon-list"></i></button>
                                 </form>
                             </div>

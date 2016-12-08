@@ -38,27 +38,24 @@ class HomeController extends Controller
         return view('home', ['appointment' => $appointment], ['userappointment' => $userappointment], ['id' => $id], ['i' => $i]);
     }
 
-    public function confirm($userappointmentid)
+    public function confirm()
     {
-        $userappointment = Userappointment::orderBy('created_at', 'asc')->get();
 
-        $userappointment->confirmed = true;
 
         return view('home');
     }
 
-    public function liste()
+    public function list()
     {
 
-        return view('about');
+        return view('list');
     }
 
     public function deny()
     {
-        $userappointment = Userappointment::orderBy('created_at', 'asc')->get();
-
-        $userappointment->confirmed = false;
 
         return view('home');
     }
+
+
 }

@@ -31,7 +31,7 @@ Route::get('/home', 'HomeController@index');
 
 Route::post('/confirm', 'HomeController@confirm');
 
-Route::get('/liste', 'HomeController@liste');
+Route::get('/list', 'HomeController@list');
 
 Route::post('/deny', 'HomeController@deny');
 
@@ -42,3 +42,5 @@ Route::post('/vereinreg','VereinRegController@newVerein');
 Route::get('/terminreg', 'TerminRegController@index');
 
 Route::post('/terminreg','TerminRegController@newTermin');
+
+
