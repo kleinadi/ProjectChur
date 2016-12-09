@@ -38,11 +38,6 @@
                                     </span>
                                 @endif
                             </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" value="remember"> Anmeldedaten Erinnern
-                                </label>
-                            </div>
                             <div class="form-group">
                                 <button class="btn btn-m btn-primary btn-block rount" type="submit">Anmelden</button>
                             <!-- <button class="btn btn-m btn-primary btn-block rount" href="{{ url('/password/reset') }}">Passwort vergessen</button> -->

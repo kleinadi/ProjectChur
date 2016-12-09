@@ -37,11 +37,11 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-Route::post('/confirm', 'HomeController@confirm');
+Route::get('/confirm/{eventId}', 'HomeController@confirm');
 
-Route::get('/list', 'HomeController@list');
+Route::get('/liste/{eventId}', 'HomeController@liste');
 
-Route::post('/deny', 'HomeController@deny');
+Route::get('/deny/{eventId}', 'HomeController@deny');
 
 /**
  * Display vereinreg site

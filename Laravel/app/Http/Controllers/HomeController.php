@@ -3,9 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Termin;
+use App\User;
 use App\Userappointment;
 use Illuminate\Support\Facades\Auth;
-use App\Http\Controllers\Carbon;
+
+
+
+
 
 class HomeController extends Controller
 {
@@ -43,11 +47,16 @@ class HomeController extends Controller
      *
      */
 
-    public function confirm()
+    public function confirm($eventId)
     {
+        $id = Auth::id();
+
+        $userappointment = new Userappointment;
+        $userappointment->where('fk_users', $id)->where('fk_appointment', $eventId)->update(['confirmed' => 1]);
 
 
-        return view('home');
+
+        return $this->index();
     }
 
     /**
@@ -55,10 +64,16 @@ class HomeController extends Controller
      *
      */
 
-    public function list()
+    public function liste($eventId)
     {
 
-        return view('list');
+        $userappointment = new Userappointment;
+        $userappointment = $userappointment->where('fk_appointment', $eventId)->get();
+
+        $users = User::all();
+
+
+        return view('liste', ['userappointment' => $userappointment], ['users' => $users]);
     }
 
     /**
@@ -66,10 +81,16 @@ class HomeController extends Controller
      *
      */
 
-    public function deny()
+    public function deny($eventId)
     {
+        $id = Auth::id();
 
-        return view('home');
+        $userappointment = new Userappointment;
+        $userappointment->where('fk_users', $id)->where('fk_appointment', $eventId)->update(['confirmed' => 0]);
+
+
+
+        return $this->index();
     }
 
 

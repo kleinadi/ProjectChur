@@ -10,15 +10,13 @@
                 <div class="container">
                     <div class="carousel-caption">
                         <h1>Teilnehmerliste</h1>
-                        <p>Name</p>
-                        <p>Name</p>
-                        <p>Name</p>
-                        <p>Name</p>
-                        <p>Name</p>
-                        <p>Name</p>
-                        <p>Name</p>
-                        </br>
-
+                        @foreach ($userappointment as $userappoinmentline)
+                            @foreach ($users as $user)
+                                @if ($userappoinmentline->fk_users == $user->id & $userappoinmentline->confirmed == 1)
+                                <div><p>Name: {{ $user->name }}</p></div>
+                                @endif
+                            @endforeach
+                        @endforeach
 
                     </div>
                 </div>

@@ -49,10 +49,7 @@
             <form class="form-signin" role="form" method="POST" action="{{ url('/register') }}">
                 {{ csrf_field() }}
             <hr>
-            <button class="btn btn-primary btn-m round" type="submit">Mit Facebook anmelden</button>
-            <form class="form-signin">
-                <br>
-                <p>oder</p>
+
                 <h3 class="form-signin-heading">Melde dich mit deiner E-Mail Addresse an</h3>
 
                 <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
