@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Validator;
 class TerminRegController extends Controller
 {
     /**
-     * Display ALL Tasks
+     * Display terminreg view
      **/
     public function index()
     {
@@ -26,7 +26,7 @@ class TerminRegController extends Controller
     }
 
     /**
-     * Add a new Task
+     * Add a new appointment
      */
 
     public function newTermin(Request $request)

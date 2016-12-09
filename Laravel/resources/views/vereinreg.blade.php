@@ -24,6 +24,9 @@
                                     </span>
                                 @endif
                             </div>
+
+                            <!-- lists all users -->
+
                             <h1>Wähle deine Mitglieder</h1>
                             @foreach ($users as $user)
                                 <div class="checkbox">

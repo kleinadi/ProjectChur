@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Validator;
 class HelloController extends Controller
 {
     /**
-     * Display about site
+     * Display start site
      **/
     public function showView()
     {

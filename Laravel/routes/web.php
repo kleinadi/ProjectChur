@@ -24,8 +24,16 @@ Route::get('/', 'HelloController@showView');
 */
 Route::get('/about', 'AboutController@showView');
 
+/**
+ * Display login and register site
+ */
+
 
 Auth::routes();
+
+/**
+ * Display home site
+ */
 
 Route::get('/home', 'HomeController@index');
 
@@ -35,9 +43,17 @@ Route::get('/list', 'HomeController@list');
 
 Route::post('/deny', 'HomeController@deny');
 
+/**
+ * Display vereinreg site
+ */
+
 Route::get('/vereinreg', 'VereinRegController@index');
 
 Route::post('/vereinreg','VereinRegController@newVerein');
+
+/**
+ * Display terminreg site
+ */
 
 Route::get('/terminreg', 'TerminRegController@index');
 

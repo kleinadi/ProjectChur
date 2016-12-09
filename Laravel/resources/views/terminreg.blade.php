@@ -4,6 +4,9 @@
 
     <!-- Carousel
     ================================================== -->
+
+    <!-- shows all fields needed to register a new appointment -->
+
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner" role="listbox">
             <div class="item active" style="background-image: url('img/13974352545_9b48cb20e9_o.jpg'); background-size: cover;">
@@ -74,6 +77,9 @@
                                     </span>
                                 @endif
                             </div>
+
+                            <!-- lists all clubs which you are in -->
+
                             <div class="form-group">
                                 <select class="form-control" name="appointmentclub" id="appointmentclub">
                                     @foreach ($userclub as $myuserclub)

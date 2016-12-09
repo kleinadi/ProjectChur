@@ -34,13 +34,12 @@
 
 </head>
 
+<!-- registerfields for a new user -->
 
-<!-- NAVBAR
-================================================== -->
 <body>
 <div class="container marketing">
 
-    <!-- Three columns of text below the carousel -->
+    <!--  -->
     <div class="row">
         <div class="col-lg-4">
         </div><!-- /.col-lg-4 -->
@@ -115,10 +114,7 @@
     <div class="col-lg-4">
     </div><!-- /.col-lg-4 -->
 </div><!-- /.row -->
-<!-- Marketing messaging and featurettes
-================================================== -->
-<!-- Wrap the rest of the page in another container to center all the content. -->
-<!-- FOOTER -->
+
 
 </div><!-- /.container -->
 

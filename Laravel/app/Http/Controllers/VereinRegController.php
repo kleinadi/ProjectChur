@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Validator;
 class VereinRegController extends Controller
 {
     /**
-     * Display ALL Tasks
+     * Display vereinreg view
      **/
     public function index()
     {
@@ -25,7 +25,7 @@ class VereinRegController extends Controller
     }
 
     /**
-     * Add a new Task
+     * Add a new club
      */
 
     public function newVerein(Request $request)

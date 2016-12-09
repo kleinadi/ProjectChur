@@ -11,6 +11,7 @@
 
     <div class="carousel-inner cont-slider" role="listbox">
 
+        <!-- display all appointments which are important for the logged user -->
         @foreach ($userappointment as $myappointment)
             @if ($myappointment->fk_users == Auth::id())
                 @foreach ($appointment as $appointmentline)
@@ -37,6 +38,7 @@
                                     </tr>
                                 </tbody>
                             </div>
+                            <!-- Buttons to confirm or deny the appointment and show the invited users -->
                             <div class="col-lg-4">
                             <form class="form-inline" role="form" method="POST" action="{{ url('/confirm') }}">
                                 {{ csrf_field() }}

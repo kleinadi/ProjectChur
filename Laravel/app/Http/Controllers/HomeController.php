@@ -20,7 +20,7 @@ class HomeController extends Controller
     }
 
     /**
-     * Show the application dashboard.
+     * Show the Home site
      *
      * @return \Illuminate\Http\Response
      */
@@ -38,6 +38,11 @@ class HomeController extends Controller
         return view('home', ['appointment' => $appointment], ['userappointment' => $userappointment], ['id' => $id], ['i' => $i]);
     }
 
+    /**
+     * Set Confirmation on true
+     *
+     */
+
     public function confirm()
     {
 
@@ -45,11 +50,21 @@ class HomeController extends Controller
         return view('home');
     }
 
+    /**
+     * Show list of users from the appointment
+     *
+     */
+
     public function list()
     {
 
         return view('list');
     }
+
+    /**
+     * Set Confirmation on false
+     *
+     */
 
     public function deny()
     {
