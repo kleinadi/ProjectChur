@@ -16,6 +16,12 @@
             @if ($myappointment->fk_users == Auth::id())
                 @foreach ($appointment as $appointmentline)
                     @if ($appointmentline->id == $myappointment->fk_appointment)
+                        <?php
+                                $appointmentTimestamp = strtotime($appointmentline->date);
+                                $timeNow = time();
+                                ?>
+                            @if($appointmentTimestamp > $timeNow)
+
 
         <div class="item">
             <div class="container">
@@ -30,7 +36,7 @@
                                                 <td class="table-text">
                                                 <div><h2>{{ $appointmentline->name }}</h2></div>
                                                 <div><h2>{{ $appointmentline->date }}</h2></div>
-                                                <div><h2>{{ $appointmentline->time }}</h2></div>
+                                                <div><h2>{{ $appointmentline->time }} </h2></div>
                                                 <div><h2>{{ $appointmentline->location }}</h2></div>
                                                 <div><h2>{{ $appointmentline->place }}</h2></div>
                                                 <div><h2>{{ $appointmentline->leader }}</h2></div>
@@ -62,6 +68,7 @@
             </div>
         </div>
 
+                        @endif
                         @endif
                 @endforeach
             @endif
