@@ -28,11 +28,21 @@
                             <!-- lists all users -->
 
                             <h1>Wähle deine Mitglieder</h1>
+                            <div class="btn-group">
+                                <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle">Mitglieder <span class="caret"></span></button>
+                            <ul class="dropdown-menu scrollable-menu" role="menu">
                             @foreach ($users as $user)
-                                <div class="checkbox">
-                                    <label><input name="user_list[]" type="checkbox" value="{{ $user->id }}">{{ $user->name }}</label>
+                                <li>
+                                <div class="checkbox" style="color:black">
+                                    <label><input name="user_list[]" style="color:black" type="checkbox" value="{{ $user->id }}">{{ $user->name }}</label>
                                 </div>
+                                </li>
                             @endforeach
+                                </ul>
+
+                                </div>
+                            <br>
+                            <br>
                             <div class="form-group">
                                 <button class="btn btn-m btn-primary btn-block rount" type="submit">Verein erstellen</button>
                             </div>

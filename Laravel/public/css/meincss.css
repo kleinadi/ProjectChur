@@ -141,3 +141,9 @@ a {
     line-height: 1.33;
     border-radius: 35px;
 }
+
+.scrollable-menu {
+    height: auto;
+    max-height: 120px;
+    overflow-x: hidden;
+}
