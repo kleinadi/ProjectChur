@@ -30,9 +30,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $userappointment = Userappointment::orderBy('created_at', 'asc')->get();
+        $userappointment = Userappointment::orderBy('created_at', 'desc')->get();
 
-        $appointment = Termin::orderBy('date', 'asc')->get();
+        $appointment = Termin::orderBy('date', 'asc')->orderBy('time', 'asc')->get();
 
         $id = Auth::id();
 

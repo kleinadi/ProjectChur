@@ -12,15 +12,15 @@
     <div class="carousel-inner cont-slider" role="listbox">
 
         <!-- display all appointments which are important for the logged user -->
-        @foreach ($userappointment as $myappointment)
-            @if ($myappointment->fk_users == Auth::id())
-                @foreach ($appointment as $appointmentline)
+        @foreach ($appointment as $appointmentline)
+            @foreach ($userappointment as $myappointment)
+                @if ($myappointment->fk_users == Auth::id())
                     @if ($appointmentline->id == $myappointment->fk_appointment)
                         <?php
-                                $appointmentTimestamp = strtotime($appointmentline->date);
-                                $timeNow = time();
+                                $appointmentTimestamp = strtotime("$appointmentline->date $appointmentline->time +0000");
+                                $timeNow = strtotime("+1 hours");
                                 ?>
-                            @if($appointmentTimestamp > $timeNow)
+                            @if($appointmentTimestamp >= $timeNow)
 
 
         <div class="item">
@@ -36,7 +36,7 @@
                                                 <td class="table-text">
                                                 <div><h2>{{ $appointmentline->name }}</h2></div>
                                                 <div><h2>{{ $appointmentline->date }}</h2></div>
-                                                <div><h2>{{ $appointmentline->time }} </h2></div>
+                                                <div><h2>{{ $appointmentline->time }}</h2></div>
                                                 <div><h2>{{ $appointmentline->location }}</h2></div>
                                                 <div><h2>{{ $appointmentline->place }}</h2></div>
                                                 <div><h2>{{ $appointmentline->leader }}</h2></div>
@@ -69,9 +69,9 @@
         </div>
 
                         @endif
-                        @endif
-                @endforeach
-            @endif
+                    @endif
+                @endif
+            @endforeach
         @endforeach
 
     </div>
